@@ -1,7 +1,7 @@
 class Solution:
     def calculate(self, s: str) -> int:
         stack, cur, op = [], 0, '+'
-        for c in s + "+":
+        for c in s+ "+":
             if c == " ":
                 continue
             elif c.isdigit():
