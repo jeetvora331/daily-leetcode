@@ -13,9 +13,12 @@ class Solution:
         if not preorder or not inorder:
             return None
         
-        root = TreeNode(preorder[0])
-        temp = inorder.index(preorder[0])
-        root.left = self.buildTree(preorder[1:temp + 1] , inorder[:temp])
-        root.right = self.buildTree(preorder[temp + 1 :] , inorder[temp + 1 :])
+        rootValue = preorder.pop(0)
+        idx = inorder.index(rootValue)
+        root = TreeNode(rootValue)
+        
+        root.left = self.buildTree(preorder , inorder[:idx])
+        root.right = self.buildTree(preorder, inorder[idx + 1 :])
+        
         return root
         
