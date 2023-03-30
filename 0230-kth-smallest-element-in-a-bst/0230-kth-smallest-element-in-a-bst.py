@@ -10,17 +10,13 @@ class Solution:
         n = 0
         curr = root 
         
-        while curr or stack:
-            
-            while curr:
-                stack.append(curr)
-                curr = curr.left
+        def inorder(root):
+            if root:
                 
-            curr = stack.pop()
-            n = n + 1
-            
-            if n == k :
-                return curr.val
-            
-            curr = curr.right
+                inorder(root.left)
+                stack.append(root.val)
+                inorder(root.right)
+        inorder(root)
+        return stack[k-1]
+        
         
