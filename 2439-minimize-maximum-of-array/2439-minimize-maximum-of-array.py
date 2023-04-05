@@ -1,10 +1,10 @@
 class Solution:
     def minimizeArrayValue(self, nums: List[int]) -> int:
         res = nums[0]
-        total = res
+        total = nums[0]
         
         for i in range(1, len(nums)):
             total += nums[i]
-            res = max(res , math.ceil(total/(i+1)))
-        
+            temp = math.ceil(total/(i+1))
+            res = max(res, temp)
         return res
