@@ -12,9 +12,8 @@ class Solution:
                 return 1
             
             visit.add((r,c))
-            curr = min(dfs(r+1,c), dfs(r,c+1),dfs(r-1,c),dfs(r,c-1))
+            return min(dfs(r+1,c), dfs(r,c+1),dfs(r-1,c),dfs(r,c-1))
             
-            return curr
         
         res = 0
         for r in range(rows):
