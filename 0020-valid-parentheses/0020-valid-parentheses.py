@@ -17,7 +17,8 @@ class Solution:
                 
             else:
                 stack.append(i)
-        return not stack
+        return not stack  #returns true if stack is empty 
+    
         
         
         # Solution without stack
