@@ -9,6 +9,6 @@ class Solution:
             if end>= one:
                 dp[end] += dp[end - one]
             
-            dp[end]%= mod
+            dp[end]=  dp[end]%mod
         
         return sum(dp[low:high +1]) % mod
