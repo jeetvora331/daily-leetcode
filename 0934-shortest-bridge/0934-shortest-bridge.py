@@ -1,5 +1,3 @@
-
-
 class Solution:
     def shortestBridge(self, grid: List[List[int]]) -> int:
         N = len(grid)
@@ -12,13 +10,12 @@ class Solution:
         
         def dfs(r,c):
             if (invalid(r,c) or not grid[r][c] or (r,c) in visited):
-                return
+                return 
             
             visited.add((r,c))
             for dr , dc in direct:
                 dfs(r+dr , c + dc)
                 
-            return None
         
         def bfs():
             res = 0
@@ -41,7 +38,6 @@ class Solution:
                         visited.add((currR, currC))
                 res +=1
                         
-            return -1
             
         for i in range(N):
             for j in range(N):
