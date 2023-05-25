@@ -11,11 +11,11 @@ var chunk = function(arr, size) {
         let count = size
         const temp = []
         
-        while (count-- >0 && index<arr.length){
-            temp.push(arr[index])
-            index++
+        while (index<arr.length){
+            cArr.push(arr.slice(index , index + size ))
+            index = index + size     
         }
-        cArr.push(temp)
+        
         
     }
     return cArr
