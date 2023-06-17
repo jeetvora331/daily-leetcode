@@ -14,4 +14,7 @@ class Solution:
                     dp2[arr2[idx]] = min(dp2[arr2[idx]], dp[prev]+1)
             dp = dp2
         
-        return min(dp.values()) if dp else -1
+        if dp:
+            return min(dp.values())
+        else:
+            return -1
