@@ -11,10 +11,10 @@ class Solution:
         for i in nums:
             if i ==0:
                 res.append(0)
-            else:
+                continue 
                 
-                a = bucket[i -1]
-                res.append(a)
+            a = bucket[i-1]
+            res.append(a)
         return res
             
 
