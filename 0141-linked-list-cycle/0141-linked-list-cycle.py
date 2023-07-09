@@ -17,12 +17,3 @@ class Solution:
                 return True
         return False
         
-        
-#         S = head
-#         F = head
-#         while F and F.next:
-#             S = S.next
-#             F = F.next.next
-#             if S == F:
-#                 return True
-#         return False
