@@ -8,7 +8,7 @@ class Solution:
         freq.sort()
         del_count = 0
         
-        for i in range(24, -1, -1):
+        for i in reversed(range(25)):
             if freq[i] ==0:
                 break
             
